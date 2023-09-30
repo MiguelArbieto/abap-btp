@@ -39,7 +39,7 @@ CLASS zcl_upload_data_script_ma IMPLEMENTATION.
     ( bi_categ ='H' tipo_acceso ='4' ) ).
 
     "Delete possible entries; insert new entries
-    DELETE FROM ztb_acc_categ_ma.
+    DELETE FROM ztb_acc_categ_ma. "#EC CI_NOWHERE
     INSERT ztb_acc_categ_ma FROM TABLE @lt_acc_categ.
 
     IF sy-subrc EQ 0.
